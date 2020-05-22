@@ -1,0 +1,212 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+%\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\DefineNamedColor{named}{cvcolor}{rgb}{0.1,0.4,0.6}
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Black}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=cvcolor, linkcolor=cvcolor} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{2011--Present} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=0em\hangafter=0 \parbox{\datebox}{\small \textit{#1}} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{gobble} % disable page numbers entirely
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Chad McKinney}}\vspace{0.75em} % Your name
+
+%\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\hspace{1em}(805) 427-1768 % Phone number(s)
+
+\hspace{1em}\href{mailto:chad@chadmckinneyaudio.com}{chad@chadmckinneyaudio.com}}
+
+\hspace{1em}\href{http://www.chadmckinneyaudio.com}{www.chadmckinneyaudio.com} % Personal website
+
+\hspace{1em}\href{http://www.github.com/ChadMcKinney}{www.github.com/ChadMcKinney} % github account
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	Profile
+%----------------------------------------------------------------------------------------
+\noindent\spacedlowsmallcaps{Profile}\vspace{1em}
+
+\Description{Versatile programmer and researcher with a wide range of experience including gameplay programming, engine development, audio DSP, compilers, user interfaces, networking, and web based projects. Additional skills include music composition, sound design, and generative creativity.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{2016--Present}{Lead Gameplay Engineer, Cloud Imperium Games}
+
+\Description{\emph{Star Citizen and Squadron 42} -- Developed and supported many player facing multiplayer gameplay features using a highly modified fork of CryEngine/Lumberyard in C++. Features include the interaction system, item health and destruction, the room and atmosphere system, player created missions, energy and power distribution, designer systems for item creation, spline traversal to planetary surface locations, physically moving elevators, inventory, global persistence, and more.}
+    
+\Description{Promoted to Lead Gameplay Engineer in 2017 and duties expanded to include managing and mentoring a team of gameplay engineers, contributing to company wide technology initiatives, and coordinating with directors and other discipline leads. Additionally, I run the hiring initiative for gameplay engineers in the LA and Austin studios, conducting interviews, reviewing code, and have secured many new members on the team.}
+
+%------------------------------------------------
+
+\NewEntry{2014--2016}{Software Engineer, Zindagi Games}
+
+\Description{\emph{Elder Scrolls Online} -- UI engineer on a third party team for the ESO console release using Lua, Xml, and C++. Developed console implementations for various systems such as the guild store, looting, character creation, quests, and inventory.}
+\Description{Once the ESO contract ended I moved over to gameplay programming on mobile games using C\# and Unity3D. Implemented several gameplay features such as various puzzle mechanics, a recurring rewards and event system, as well as rewrote the audio and music playback system used for all projects in house.}
+
+%------------------------------------------------
+
+\NewEntry{2011--2014}{Researcher and Teaching Assistant, University of Sussex}
+
+\Description{Researched and developed collaborative systems for making generative music. Projects include several network synced 3D environments with procedurally driven interfaces and a pure functional language for live-coding music that compiles to JavaScript and runs in a browser. Also provided teaching assistance for classes including Generative Creativity, Intro to Programming, Operating Systems, Networking, Compilers, and Computer Music.}
+
+%------------------------------------------------
+\vspace{0.5em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Programming Languages}\vspace{1em}
+
+\Description{C/C++, C\#, Haskell, Lua, Python, Unix/Bash, JavaScript, SuperCollider}
+
+\spacedlowsmallcaps{Skills}\vspace{1em}
+
+\Description{Data Oriented Programming, Multithreading, Linear Algebra, Linux Development, Digital Signal Processing, Domain Specific Language Design}
+
+\spacedlowsmallcaps{Engines, Frameworks, Libraries, and APIs}\vspace{1em}
+
+\Description{CryEngine, Lumberyard, Unreal, Unity3D, WebGL/Web Audio, C11, C++11/14/17, Boost, Qt, LLVM, LaTeX}
+
+\spacedlowsmallcaps{Tools}\vspace{1em}
+
+\Description{Visual Studio, Perforce, GDB, Git, Rad Tools Telemetry, CMake, WAF, VIM}
+
+%------------------------------------------------
+\vspace{0.5em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2011--2016}{Doctor of Philosophy, University of Sussex}
+
+\Description{Music Informatics, Dissertation: Design, Collaboration, and Embodiment in Networked Music Interfaces for Live Performance}
+
+%------------------------------------------------
+
+\NewEntry{2007--2009}{Master of Fine Arts, Mills College}
+
+\Description{Electronic Music and Recording Media}
+
+%------------------------------------------------
+
+\NewEntry{2001--2007}{Bachelor of Music, University of Oklahoma}
+
+\Description{Music Composition}
+
+
+%------------------------------------------------
+
+\vspace{0.5em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Publications}\vspace{1em}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2016, Sussex}{\small{Design, Collaboration, and Embodiment in Networked}}
+\NewEntry{}{\small{Music Interfaces for Live Performance}}
+\vspace{0.3em}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2014, NIME}{\small{Quick Live Coding Collaboration In The Web Browser}}
+\vspace{0.3em}
+%\Description{Discusses web based live coding and a new language called Lich.js}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2013, Bantam}{\small{Stout recipe included in the book \emph{Brewing Britain}}}
+\vspace{0.3em}
+%\Description{Contributed an imperial stout recipe for a survey of UK based home brewers.}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2013, NIME}{\small{An Interactive 3D Networked Music Space}}
+\vspace{0.3em}
+%\Description{Presents a new 3D interactive system for networked music collaboration.}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2012, LIPAM}{\small{Visualization of Network Based Multi-User Instruments}}
+\vspace{0.3em}
+%\Description{Survey of interfaces the author has developed for network music performance.}
+
+\NewEntry{2012, LIPAM}{\small{Liveness in Network Music Performance}}
+\vspace{0.3em}
+
+%----------------------------------------------------------------------------------------
+\NewEntry{2012, SMC}{\small{Yig: The Father of Serpents}}
+\vspace{0.3em}
+%\Description{Presents Yig, a collaborative interface for creating audio feedback networks.}
+
+\NewEntry{2012, ICMC}{\small{OSCthulhu: Applying Video Game State Based}}
+\NewEntry{}{\small{Synchronization to Network Computer Music}}
+\vspace{0.3em}
+
+\NewEntry{2012, SLEO}{\small{Glitch Lich: Evolution of An Intercontinental Laptop Band}}
+\vspace{0.3em}
+
+\NewEntry{2009, Batty}{\small{Glitch art contribution to \emph{Glitch: Designing Imperfection}}}
+\vspace{0.3em}
+
+\NewEntry{2007, Mills}{\small{Metagaming: Experiments With Art And Games}}
+\vspace{0.3em}
+\vspace{0.6em}
+%------------------------------------------------
+
+\vspace{0.5em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	Hobbies and Interests
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Hobbies and Interests}\vspace{1em}
+
+\Description{\textbf{Video Games\\}\vspace{0.3em}
+Favorite games and series include Grim Fandango, Dark Souls, Hearthstone, Braid, Diablo, Deus Ex, Shadow of the Colossus, Super Metroid, and The Elder Scrolls series. First computer was a Commodore64 and began gaming with games like Ultima and Battletech, which has become a life long obsession.}
+%------------------------------------------------
+\Description{\textbf{Music Composition and Performance\\}\vspace{0.3em}
+Written compositions for various bands and ensembles including technical metal, jazz, orchestra, string quartet, solo piano, percussion ensemble, Koto, and more.}
+%------------------------------------------------
+\Description{\textbf{Home Brewing Beer\\}\vspace{0.3em}
+Several years experience including high marks from the Great British Beer Festival and a published imperial stout recipe. Wide range of ales including Pale Ales, IPAs, Brown Ales, Porters, Stouts, and assorted Belgian styles.}
+%\end{cv}
+
+\end{document}
